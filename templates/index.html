@@ -1,0 +1,29 @@
+<html>
+<head>
+   <title>Demo Flask-SQLite</title>
+</head>
+<body>
+   <h2>Demo Flask-SQLite</h2>   
+   <table border="1">
+		<tr>
+         <th width=60>Nim</th>
+         <th width=200>Nama</th>
+         <th width=170>Konsorsium</th>
+         <th width=170>Angkatan</th>
+         <th width=80>Ubah</th>
+         <th width=80>Hapus</th>
+      </tr>
+      {% for baris in container %}
+         <tr>
+            <td>{{ baris[0] }}</td>
+            <td>{{ baris[1] }}</td>
+            <td>{{ baris[2] }}</td>
+            <td>{{ baris[3] }}</td>
+            <td><a href="{{ url_for('ubah', id=baris[0]) }}">Ubah</a></td>
+            <td><a href="{{ url_for('hapus', id=baris[0]) }}">Hapus</a></td>
+         </tr>
+      {% endfor %}
+   </table>
+   <p><a href="{{ url_for('tambah') }}">Tambah Data</a> | <a href="{{ url_for('pdf') }}">Export PDF</a></p>
+</body>
+</html>

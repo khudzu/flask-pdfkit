@@ -1,0 +1,10 @@
+.venv/
+venv/
+vendor/
+__pycache__/
+*.py[cod]
+.idea/
+generated/
+static/pdf/
+*.log
+.env

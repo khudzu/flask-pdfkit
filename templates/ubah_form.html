@@ -1,0 +1,25 @@
+<html>
+<head>
+   <title>Demo Flask-SQLite</title>
+</head>
+<body>
+   <h2>Ubah Data</h2>
+   
+   <form action="{{ url_for('ubah', id=data[0]) }}" method="post">
+      ID:<br />
+      <input type="text" name="id" size="15" 
+      value="{{data[0]}}" maxlength="4" readonly /><br />
+      Judul buku:<br />
+      <input type="text" name="judul" size="50" 
+      value="{{data[1]}}" maxlength="40" /><br />
+      Penulis:<br />
+      <input type="text" name="penulis" size="30" 
+      value="{{data[2]}}" maxlength="25" /><br />
+      Penerbit:<br />
+      <input type="text" name="penerbit" size="30" 
+      value="{{data[3]}}" maxlength="30" /><br />
+      <p><input type="submit" value="Simpan"></p>
+   </form>
+
+</body>
+</html>

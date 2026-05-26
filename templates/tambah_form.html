@@ -1,0 +1,21 @@
+<html>
+<head>
+   <title>Demo Flask-SQLite</title>
+</head>
+<body>
+   <h2>Tambah Data</h2>
+   
+   <form action="{{ url_for('tambah') }}" method="post">
+      ID:<br />
+      <input type="text" name="id" size="15" maxlength="4" /><br />
+      Judul buku:<br />
+      <input type="text" name="judul" size="50" maxlength="40" /><br />
+      Penulis:<br />
+      <input type="text" name="penulis" size="30" maxlength="25" /><br />
+      Penerbit:<br />
+      <input type="text" name="penerbit" size="30" maxlength="30" /><br />
+      <p><input type="submit" value="Simpan"></p>
+   </form>
+
+</body>
+</html>
