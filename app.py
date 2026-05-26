@@ -22,6 +22,8 @@ def find_wkhtmltopdf():
       os.path.join(os.path.dirname(BASE_DIR), 'digitalsignature', 'wkhtmltox', 'bin', 'wkhtmltopdf.exe'),
       r'C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe',
       r'C:\Program Files (x86)\wkhtmltopdf\bin\wkhtmltopdf.exe',
+      '/usr/bin/wkhtmltopdf',
+      '/usr/local/bin/wkhtmltopdf',
    ]
    for candidate in candidates:
       if candidate and os.path.exists(candidate):
